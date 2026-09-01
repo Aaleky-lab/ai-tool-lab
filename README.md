@@ -1,2 +1,2 @@
-# ai-tool-lab
+# Ai-Tool-Lab
 AI tools tested, compared and explained.
