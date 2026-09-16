@@ -24,19 +24,22 @@
     <div class="feature-strip">Create <span>✦</span> Edit <span>✦</span> Research <span>✦</span> Communicate</div>
     <section class="shell tools-section" id="tools">
       <div class="section-top"><div><div class="eyebrow">The collection</div><h2 class="section-title">Twenty tools,<br>one clear place to start.</h2></div><p class="section-note">Every card opens a concise overview, a practical recommendation and the official tool website.</p></div>
-      <div class="tool-grid" id="tool-grid" aria-live="polite"></div>
+      <form class="catalog-controls" id="catalog-filters" role="search" aria-label="Find AI tools">
+        <div class="catalog-fields">
+          <div class="catalog-field catalog-search"><label for="tool-search">Search the collection</label><input id="tool-search" type="search" placeholder="Name, task or tag…" aria-controls="tool-grid"></div>
+          <div class="catalog-field"><label for="tool-category">Category</label><select id="tool-category" aria-controls="tool-grid"><option value="">All categories</option><option>Video</option><option>Images</option><option>Writing</option><option>Voice / Audio</option><option>Research / Productivity</option></select></div>
+          <div class="catalog-field"><label for="tool-access">Access</label><select id="tool-access" aria-controls="tool-grid"><option value="">All access types</option><option value="free">Free access available</option><option value="trial">Paid / trial available</option><option value="unknown">Check current plans</option></select></div>
+        </div>
+        <div class="catalog-summary"><p id="results-count" role="status" aria-live="polite" aria-atomic="true"></p><button type="reset" class="catalog-reset">Clear filters</button></div>
+        <p class="catalog-note">Free access may have usage limits. Access labels reflect our tool overviews; check the provider for current plans.</p>
+      </form>
+      <div class="tool-grid" id="tool-grid"></div>
+      <div class="catalog-empty" id="no-results" hidden><h3>No tools found</h3><p>Try another search or clear the filters to explore the full collection.</p><button type="reset" form="catalog-filters" class="primary-button">Clear all filters</button></div>
+      <noscript><p>Please enable JavaScript to browse and filter the collection.</p></noscript>
     </section>
   </main>
   <footer class="site-footer"><div class="shell footer-row"><a class="brand" href="index.html"><span class="brand-mark">AI</span>Tool Lab</a><p>AI tools, selected with intention.</p></div></footer>
   <script src="tools.js"></script>
-  <script>
-    const rating = value => '★'.repeat(value) + '☆'.repeat(5 - value);
-    const escapeHtml = value => value.replace(/[&<>'"]/g, char => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', "'":'&#39;', '"':'&quot;' })[char]);
-    document.getElementById('tool-count').textContent = aiTools.length;
-    document.getElementById('tool-grid').innerHTML = aiTools.map(tool => {
-      const tags = tool.category.split(' / ').map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('');
-      return `<a class="tool-card" href="tool.html?tool=${encodeURIComponent(tool.id)}" aria-label="View ${escapeHtml(tool.name)} overview"><div class="tool-card-top"><span class="tool-monogram">${escapeHtml(tool.short)}</span><span class="rating" aria-label="${tool.rating} out of 5 stars">${rating(tool.rating)}</span></div><h3>${escapeHtml(tool.name)}</h3><p>${escapeHtml(tool.description)}</p><div class="tags">${tags}</div></a>`;
-    }).join('');
-  </script>
+  <script src="catalog.js"></script>
 </body>
 </html>
