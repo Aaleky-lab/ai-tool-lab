@@ -1,135 +1,42 @@
-<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Tool Lab — Find the right AI tool</title>
-    <meta name="description"          content="AI Tool Lab tests and compares AI tools so you can find the right one for the job.">
-    <style>        * {            box-sizing: border-box;            margin: 0;            padding: 0;        }
-        body {            font-family: Arial, Helvetica, sans-serif;            background: #0b0b0f;            color: #ffffff;            line-height: 1.5;        }
-        a {            color: inherit;            text-decoration: none;        }
-        .container {            width: min(1100px, 92%);            margin: 0 auto;        }
-        /* NAVBAR */
-        nav {            height: 72px;            display: flex;            align-items: center;            justify-content: space-between;            border-bottom: 1px solid #22232a;        }
-        .logo {            font-size: 20px;            font-weight: 700;            letter-spacing: -0.5px;        }
-        .logo span {            color: #7c5cff;        }
-        .nav-links {            display: flex;            gap: 28px;            font-size: 14px;            color: #a6a6b0;        }
-        .nav-links a:hover {            color: #ffffff;        }
-        /* HERO */
-        .hero {            padding: 110px 0 90px;            text-align: center;        }
-        .badge {            display: inline-block;            padding: 7px 14px;            border: 1px solid #292933;            border-radius: 999px;            font-size: 12px;            color: #a6a6b0;            margin-bottom: 25px;        }
-        h1 {            font-size: clamp(42px, 7vw, 76px);            line-height: 1.05;            letter-spacing: -3px;            max-width: 850px;            margin: 0 auto 25px;        }
-        .hero h1 span {            color: #7c5cff;        }
-        .hero p {            max-width: 620px;            margin: 0 auto 35px;            color: #a6a6b0;            font-size: 18px;        }
-        .buttons {            display: flex;            justify-content: center;            gap: 12px;            flex-wrap: wrap;        }
-        .button {            padding: 13px 22px;            border-radius: 8px;            font-weight: 600;            font-size: 14px;            border: 1px solid #292933;        }
-        .button.primary {            background: #7c5cff;            border-color: #7c5cff;        }
-        .button:hover {            transform: translateY(-1px);        }
-        /* CATEGORIES */
-        .section {            padding: 70px 0;        }
-        .section-title {            font-size: 30px;            margin-bottom: 10px;        }
-        .section-subtitle {            color: #858591;            margin-bottom: 30px;        }
-        .categories {            display: grid;            grid-template-columns: repeat(4, 1fr);            gap: 14px;        }
-        .category {            border: 1px solid #24252d;            background: #111116;            padding: 24px;            border-radius: 12px;            transition: 0.2s;        }
-        .category:hover {            border-color: #7c5cff;            transform: translateY(-2px);        }
-        .category-icon {            font-size: 26px;            margin-bottom: 15px;        }
-        .category h3 {            font-size: 16px;            margin-bottom: 5px;        }
-        .category p {            color: #777783;            font-size: 13px;        }
-        /* TOOLS */
-        .tools {            display: grid;            grid-template-columns: repeat(3, 1fr);            gap: 16px;        }
-        .tool {            background: #111116;            border: 1px solid #24252d;            border-radius: 12px;            padding: 24px;        }
-        .tool-top {            display: flex;            justify-content: space-between;            margin-bottom: 15px;        }
-        .tool-name {            font-weight: 700;            font-size: 18px;        }
-        .rating {            color: #ffd166;            font-size: 13px;        }
-        .tool p {            color: #888893;            font-size: 14px;            margin-bottom: 15px;        }
-        .tag {            display: inline-block;            font-size: 11px;            padding: 5px 8px;            background: #1a1a22;            border-radius: 5px;            color: #aaaab4;            margin-right: 5px;        }
-        /* FOOTER */
-        footer {            border-top: 1px solid #22232a;            padding: 30px 0;            margin-top: 60px;            color: #666672;            font-size: 13px;        }
-        @media (max-width: 800px) {            .categories {                grid-template-columns: repeat(2, 1fr);            }
-            .tools {                grid-template-columns: 1fr;            }
-            .nav-links {                display: none;            }        }
-        @media (max-width: 500px) {            .categories {                grid-template-columns: 1fr;            }
-            .hero {                padding: 80px 0 60px;            }        }    </style></head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Twenty carefully selected AI tools for image creation, video, writing, research and productivity.">
+  <title>AI Tool Lab — Find the right AI tool</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-<div class="container">
-    <nav>        <div class="logo">            AI <span>Tool Lab</span>        </div>
-        <div class="nav-links">            <a href="#tools">Tools</a>            <a href="#categories">Categories</a>            <a href="#about">About</a>        </div>    </nav>
-
-    <section class="hero">
-        <div class="badge">            AI tools tested by humans        </div>
-        <h1>            Find the <span>right AI tool</span>            for the job.        </h1>
-        <p>            We test AI tools, compare their real-world results,            and show you which ones are actually worth using.        </p>
-        <div class="buttons">
-            <a class="button primary" href="#tools">                Explore AI Tools            </a>
-            <a class="button" href="#categories">                Browse Categories            </a>
-        </div>
+  <header class="site-header">
+    <nav class="shell nav" aria-label="Main navigation">
+      <a class="brand" href="index.html"><span class="brand-mark">AI</span>Tool Lab</a>
+      <div class="nav-links"><a href="#tools">Collection</a><a href="#about">About</a></div>
+    </nav>
+  </header>
+  <main>
+    <section class="shell hero" id="about">
+      <div class="eyebrow">Curated creative intelligence</div>
+      <h1>Find the AI tool<br>that feels <em>made for you.</em></h1>
+      <p class="hero-copy">A considered collection of practical AI tools for creating, communicating and moving from a rough idea to a polished result.</p>
+      <div class="hero-meta"><span class="pill"><strong id="tool-count">20</strong> selected tools</span><span class="pill">Updated September 2026</span><span class="pill">Images · Video · Work</span></div>
     </section>
-
-    <section class="section" id="categories">
-        <h2 class="section-title">            Explore AI tools        </h2>
-        <p class="section-subtitle">            Find the right tool for what you're trying to create.        </p>
-        <div class="categories">
-            <div class="category">                <div class="category-icon">🎥</div>                <h3>Video</h3>                <p>AI video generators and editors.</p>            </div>
-            <div class="category">                <div class="category-icon">🎙️</div>                <h3>Voice</h3>                <p>AI voice and audio tools.</p>            </div>
-            <div class="category">                <div class="category-icon">🖼️</div>                <h3>Images</h3>                <p>Generate and edit images with AI.</p>            </div>
-            <div class="category">                <div class="category-icon">✍️</div>                <h3>Writing</h3>                <p>AI tools for writing and research.</p>            </div>
-        </div>
+    <div class="feature-strip">Create <span>✦</span> Edit <span>✦</span> Research <span>✦</span> Communicate</div>
+    <section class="shell tools-section" id="tools">
+      <div class="section-top"><div><div class="eyebrow">The collection</div><h2 class="section-title">Twenty tools,<br>one clear place to start.</h2></div><p class="section-note">Every card opens a concise overview, a practical recommendation and the official tool website.</p></div>
+      <div class="tool-grid" id="tool-grid" aria-live="polite"></div>
     </section>
-
-    <section class="section" id="tools">
-        <h2 class="section-title">            Featured tools        </h2>
-        <p class="section-subtitle">            Our first tools will be tested and rated here.        </p>
-      <div class="tools">
-   <a href="elevenlabs.html" class="tool">
-    <div class="tool-top">
-        <div class="tool-name">            ElevenLabs        </div>
-        <div class="rating">            ★★★★★        </div>
-    </div>
-    <p>        AI voice generation for videos, podcasts,        voiceovers and more.    </p>
-    <span class="tag">Voice</span>    <span class="tag">Creator</span>
-</a>
-
-<a href="capcut.html" class="tool">
-    <div class="tool-top">
-        <div class="tool-name">            CapCut        </div>
-        <div class="rating">            ★★★★☆        </div>
-    </div>
-    <p>        AI-powered video editing with captions,        effects and creator-focused tools.    </p>
-    <span class="tag">Video</span>    <span class="tag">Editing</span>
-</a>
-<a href="canva.html" class="tool">    <div class="tool-top">        <div class="tool-name">            Canva        </div>
-        <div class="rating">            ★★★★☆        </div>    </div>
-    <p>        Create thumbnails, graphics and visual content        with AI-powered design tools.    </p>
-    <span class="tag">Images</span>    <span class="tag">Design</span></a>          <a href="leonardo.html" class="tool">
-    <div class="tool-top">
-        <div class="tool-name">Leonardo AI</div>
-        <div class="rating">★★★★☆</div>
-    </div>
-
-    <p>
-        AI image generation for artwork, concepts,
-        product visuals and creative design assets.
-    </p>
-
-    <span class="tag">Images</span>
-    <span class="tag">Design</span>
-</a>
-
-<a href="claude.html" class="tool">    <div class="tool-top">        <div class="tool-name">            Claude        </div>
-        <div class="rating">            ★★★★★        </div>    </div>
-    <p>        AI assistant for writing, analysis, research,        coding and complex information.    </p>
-    <span class="tag">Writing</span>    <span class="tag">Research</span></a><a href="perplexity.html" class="tool">    <div class="tool-top">        <div class="tool-name">            Perplexity        </div>
-        <div class="rating">            ★★★★☆        </div>    </div>
-    <p>        AI-powered search and research for finding        information and useful sources.    </p>
-    <span class="tag">Research</span>    <span class="tag">Search</span></a>          <a href="chatgpt.html" class="tool">    <div class="tool-top">        <div class="tool-name">            ChatGPT        </div>
-        <div class="rating">            ★★★★★        </div>    </div>
-    <p>        AI assistant for writing, research, coding,        brainstorming and everyday tasks.    </p>
-    <span class="tag">Writing</span>    <span class="tag">AI Assistant</span></a>
-    </section>
-
-    <section class="section" id="about">
-        <h2 class="section-title">            Why AI Tool Lab?        </h2>
-        <p class="section-subtitle">            There are thousands of AI tools.            We help you find the ones that are actually useful.        </p>
-    </section>
-
-    <footer>
-        © 2026 AI Tool Lab.        Built to make AI tools easier to discover.
-    </footer>
-</div>
-</body></html>
+  </main>
+  <footer class="site-footer"><div class="shell footer-row"><a class="brand" href="index.html"><span class="brand-mark">AI</span>Tool Lab</a><p>AI tools, selected with intention.</p></div></footer>
+  <script src="tools.js"></script>
+  <script>
+    const rating = value => '★'.repeat(value) + '☆'.repeat(5 - value);
+    const escapeHtml = value => value.replace(/[&<>'"]/g, char => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', "'":'&#39;', '"':'&quot;' })[char]);
+    document.getElementById('tool-count').textContent = aiTools.length;
+    document.getElementById('tool-grid').innerHTML = aiTools.map(tool => {
+      const tags = tool.category.split(' / ').map(tag => `<span class="tag">${escapeHtml(tag)}</span>`).join('');
+      return `<a class="tool-card" href="tool.html?tool=${encodeURIComponent(tool.id)}" aria-label="View ${escapeHtml(tool.name)} overview"><div class="tool-card-top"><span class="tool-monogram">${escapeHtml(tool.short)}</span><span class="rating" aria-label="${tool.rating} out of 5 stars">${rating(tool.rating)}</span></div><h3>${escapeHtml(tool.name)}</h3><p>${escapeHtml(tool.description)}</p><div class="tags">${tags}</div></a>`;
+    }).join('');
+  </script>
+</body>
+</html>
