@@ -1,6 +1,6 @@
 // Filter metadata reflects the existing access summaries, not live pricing.
 const aiTools = [
-  { id: 'elevenlabs', categories: ["Voice / Audio"], access: 'free', name: 'ElevenLabs', short: 'EL', category: 'Voice / Audio', rating: 5, description: 'Natural-sounding AI voice generation for narration, dubbing and audio projects.', bestFor: 'Voiceovers, podcasts, localization and creator audio.', free: 'Free access is available with usage limits.', url: 'https://elevenlabs.io/' },
+  { id: 'elevenlabs', categories: ["Voice / Audio"], access: 'free', name: 'ElevenLabs', short: 'EL', category: 'Voice / Audio', rating: 5, description: 'Natural-sounding AI voice generation for narration, dubbing and audio projects.', bestFor: 'Voiceovers, podcasts, localization and creator audio.', free: 'Free access is available with usage limits.', affiliate: true, url: 'https://try.elevenlabs.io/74yx7j8xcphj' },
   { id: 'capcut', categories: ["Video"], access: 'free', name: 'CapCut', short: 'CC', category: 'Video / Editing', rating: 4, description: 'Creator-focused video editing with captions, effects and AI-assisted tools.', bestFor: 'Short-form video, captions and social content.', free: 'A free version is available; some features require a paid plan.', url: 'https://www.capcut.com/' },
   { id: 'canva', categories: ["Images"], access: 'free', name: 'Canva', short: 'CA', category: 'Images / Design', rating: 4, description: 'Fast visual design for presentations, social graphics, documents and campaigns.', bestFor: 'Everyday design, thumbnails and brand content.', free: 'A free plan is available, with premium content and features on paid plans.', url: 'https://www.canva.com/' },
   { id: 'chatgpt', categories: ["Writing","Research / Productivity"], access: 'free', name: 'ChatGPT', short: 'CG', category: 'Writing / Assistant', rating: 5, description: 'General-purpose AI assistant for writing, analysis, ideas, research and coding.', bestFor: 'Brainstorming, drafting, learning and everyday problem solving.', free: 'A free plan is available, with expanded access on paid plans.', url: 'https://chatgpt.com/' },
@@ -22,4 +22,6 @@ const aiTools = [
   { id: 'otter', categories: ["Voice / Audio","Research / Productivity"], access: 'free', name: 'Otter.ai', short: 'OT', category: 'Meetings / Transcription', rating: 4, description: 'AI meeting notes with live transcription, summaries and searchable conversations.', bestFor: 'Meeting capture, transcripts, summaries and follow-up notes.', free: 'A free plan is available with usage limits.', url: 'https://otter.ai/' }
 ];
 
+
 window.aiTools = aiTools;
+
