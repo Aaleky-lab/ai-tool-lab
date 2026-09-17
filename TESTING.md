@@ -18,6 +18,17 @@ Serve this directory with any static HTTP server and open index.html. No build s
 - Check 320px and 390px mobile widths and 1280px desktop: no horizontal overflow, readable controls and cards.
 - Browser console: no JavaScript warnings or errors during filtering and detail navigation.
 
+## Tool Finder and guide checks
+
+- Tool Finder requires a choice before advancing and shows three steps.
+- Video + easy + free recommends CapCut and shows two alternatives.
+- Images + creative + any recommends a high-fit image generator.
+- Back from the result returns to step three; navigation remains keyboard accessible.
+- All five guide cards open a unique page with one H1, canonical URL, description and links back to the catalog.
+- Affiliate disclosure is linked from the homepage, guides and dynamic detail page.
+- `robots.txt` points to `sitemap.xml`; every URL in the sitemap resolves.
+- `analytics.js` sends no network request while `GA4_ID` is empty, but pushes named events into `dataLayer`.
+
 These checks were exercised in the in-app Chromium browser during implementation. JavaScript syntax and whitespace checks also passed:
 
 ```sh
