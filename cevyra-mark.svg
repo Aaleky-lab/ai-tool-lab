@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="CEVYRA mark">
+  <defs>
+    <linearGradient id="g" x1="34" y1="24" x2="220" y2="225" gradientUnits="userSpaceOnUse"><stop stop-color="#74f6dc"/><stop offset="1" stop-color="#a88cff"/></linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="256" height="256" rx="62" fill="#070b19"/>
+  <circle cx="128" cy="128" r="80" fill="none" stroke="url(#g)" stroke-width="8" opacity=".32"/>
+  <path d="M184 75A69 69 0 1 0 184 181" fill="none" stroke="url(#g)" stroke-width="23" stroke-linecap="round" filter="url(#glow)"/>
+  <circle cx="185" cy="128" r="11" fill="#f6c96d"/>
+</svg>

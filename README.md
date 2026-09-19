@@ -1,4 +1,4 @@
-# AI Tool Lab
+# CEVYRA
 
 AI tools tested, compared and explained in a static GitHub Pages site.
 

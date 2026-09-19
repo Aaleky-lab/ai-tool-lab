@@ -3,30 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A practical AI Tool Lab overview.">
+  <meta name="description" content="A practical CEVYRA overview.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://aaleky-lab.github.io/ai-tool-lab/tool.html">
   <meta property="og:type" content="article">
-  <meta property="og:title" content="AI tool overview | AI Tool Lab">
-  <meta property="og:description" content="A practical AI Tool Lab overview.">
-  <title>Tool overview | AI Tool Lab</title>
+  <meta property="og:title" content="AI tool overview | CEVYRA">
+  <meta property="og:description" content="A practical CEVYRA overview.">
+  <title>Tool overview | CEVYRA</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header"><nav class="shell nav" aria-label="Main navigation"><a class="brand" href="index.html"><span class="brand-mark">AI</span>Tool Lab</a><div class="nav-links"><a href="index.html#tools">Collection</a><a href="index.html#about">About</a></div></nav></header>
+  <header class="site-header"><nav class="shell nav" aria-label="Main navigation"><a class="brand" href="index.html"><span class="brand-mark">C</span>CEVYRA</a><div class="nav-links"><a href="index.html#tools">Collection</a><a href="index.html#about">About</a></div></nav></header>
   <main class="shell detail-main">
     <a class="back-link" href="index.html#tools">← Back to the collection</a>
     <section class="detail-hero" id="detail-hero"></section>
     <section class="detail-layout" id="detail-layout"></section>
   </main>
-  <footer class="site-footer"><div class="shell footer-row"><a class="brand" href="index.html"><span class="brand-mark">AI</span>Tool Lab</a><p>AI tools, selected with intention. <a href="affiliate-disclosure.html">Affiliate disclosure</a></p></div></footer>
+  <footer class="site-footer"><div class="shell footer-row"><a class="brand" href="index.html"><span class="brand-mark">C</span>CEVYRA</a><p>AI tools, selected with intention. <a href="affiliate-disclosure.html">Affiliate disclosure</a></p></div></footer>
   <script src="tools.js"></script>
   <script>
     const escapeHtml = value => value.replace(/[&<>'"]/g, char => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', "'":'&#39;', '"':'&quot;' })[char]);
     const id = new URLSearchParams(location.search).get('tool');
     const tool = aiTools.find(item => item.id === id) || aiTools[0];
     const rating = '★'.repeat(tool.rating) + '☆'.repeat(5 - tool.rating);
-    document.title = `${tool.name} review: who it is best for | AI Tool Lab`;
+    document.title = `${tool.name} review: who it is best for | CEVYRA`;
     const description = `${tool.name}: ${tool.description} See who it is best for, access information and the official website.`;
     document.querySelector('meta[name="description"]').content = description;
     document.querySelector('meta[property="og:title"]').content = document.title;
